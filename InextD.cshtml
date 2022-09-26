@@ -1,0 +1,924 @@
+﻿
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="" />
+    <meta name="Keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <link href="~/Content/pc/css/drawer.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/Content/pc/css/drawer.min.css">
+    <script src="~/Content/pc/js/jquery.min.js"></script>
+    <script src="~/Content/pc/js/iscroll.js"></script>
+    <script src="~/Content/pc/js/jquery.drawer.min.js"></script>
+    <link rel="stylesheet" href="~/Content/pc/css/animate.min.css">
+    <link href="~/Content/pc/css/style.css" rel="stylesheet" />
+    @*<link href="~/Content/css/style.css" rel="stylesheet" />*@
+
+   
+
+    @*<script type="text/javascript">
+        $(function () {
+            $(".nav_m li:eq(7)").addClass("cur");
+        });
+    </script>*@
+    <style>
+        /*.box ul li:hover {
+           transform:scale(1.8);
+           z-index:9999999;
+           border:2px solid rgba(0,0,0,0.3);
+           margin-top:-150px;
+        }*/
+        .jianbian {
+          background:repeating-linear-gradient(to right , #c , white);
+          /*background:repeating-linear-gradient(to bottom,#ff0,#0f0);*/
+        }
+          .jianbian1 {
+          background:repeating-linear-gradient(to top , #ED860B , white);
+          /*background:repeating-linear-gradient(to bottom,#ff0,#0f0);*/
+        }
+        
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            javascript: document.querySelector('.web_notice').remove();
+            $(window).scroll(function () {
+                if ($(window).scrollTop() == 0) {
+                    $("header").removeClass("scroll-header");
+                } else {
+                    $("header").addClass("scroll-header");
+                }
+            });
+        });
+        function ReturnTop() {
+            $("body,html").animate({ scrollTop: 0 }, 500);
+            return false;
+        }
+        function denglu() {
+             
+        } 
+        function zhuce() {
+            $("#zhuce").css("display", "block");
+        }
+        function remove() {
+            $("#zhuce").css("display", "none");
+        }
+        document.oncontextmenu = function (event) { if (window.event) { event = window.event; } try { var the = event.srcElement; if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) { return false; } return true; } catch (e) { return false; } } //屏蔽右键菜单
+        document.onpaste = function (event) { if (window.event) { event = window.event; } try { var the = event.srcElement; if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) { return false; } return true; } catch (e) { return false; } } //屏蔽粘贴
+        document.oncopy = function (event) { if (window.event) { event = window.event; } try { var the = event.srcElement; if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) { return false; } return true; } catch (e) { return false; } } //屏蔽复制
+        document.oncut = function (event) { if (window.event) { event = window.event; } try { var the = event.srcElement; if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) { return false; } return true; } catch (e) { return false; } } //屏蔽剪切
+        document.onselectstart = function (event) { if (window.event) { event = window.event; } try { var the = event.srcElement; if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) { return false; } return true; } catch (e) { return false; } } //屏蔽选择
+    </script>
+</head>
+<body>
+   
+    <header style="height:130px;">
+       <div  style="width:100%;background-color:#f8f2f2;height:36px;">
+           <div  style="width:80%;margin-left:12%;">
+              <div><text style="line-height:36px;font-size:16px;">欢迎浏览中国共富平台官方网站~</text>
+                  <button  style="margin-left:790px;background-color:white;height:28px;width:60px;border:1px solid #e6e0e0;font-size:17px;"onclick="denglu()">登录</button>
+                  <button style="background-color:white;height:28px;width:60px;border:1px solid #e6e0e0;font-size:17px;" onclick="zhuce()">注册</button>
+               </div>
+           </div>
+       </div>
+        <div class="wrap">
+            
+            <div class="logo" style="width:410px;margin-top:0px;">
+                <a href="~/Content/pc/index.html">
+                    <img src="~/Content/pc/images/logo.png" >
+                </a>
+            </div>
+            
+                <nav class="nav_m" style="margin-left:680px;">
+                    <ul style="margin-top:-120px;">
+                        <li style="margin-left:10px;"><a href="/PCIndex/InextD" style="font-weight:900;font-size:19px;color:#ED860B">大政方针</a></li>
+                        <li style="width:30px;"><a style="margin-top:50px;">|</a></li>
+                        <li style="margin-left:10px;"><a href="/PCIndex/sannongzhengce" style="font-weight:900;font-size:19px;">三农政策</a></li>
+                        <li  style="width:30px;"><a style="margin-top:50px;">|</a></li>
+                        <li><a href="/PCIndex/zhenshefengwu" style="font-weight:900;font-size:19px;">镇社风物</a></li>
+                        <li  style="width:30px;"><a  style="margin-top:50px;">|</a></li>
+                        <li><a href="/PCIndex/zhongyejiqun" style="font-weight:900;font-size:19px;">种业集群</a></li>
+                    </ul>
+                </nav>
+            
+          
+            <div class="nav_1">
+                <div class="drawer drawer-right">
+                    <div class="drawer-toggle drawer-hamberger">
+                        <span></span>
+                    </div>
+                    <div class="drawer-main drawer-default">
+                        <nav class="drawer-nav" role="navigation">
+                            <ul class="drawer-nav-list">
+                                <li><a href="~/Content/pc/index.html">大政方针</a></li>
+                                <li><a href="~/Content/pc/Overseas.html">三农政策</a></li>
+
+                            </ul>
+                        </nav>
+                    </div>
+                    <script>
+                    $(document).ready(function () {
+                        $('.drawer').drawer();
+                        $('.js-trigger').click(function () {
+                            $('.drawer').drawer("open");
+                        });
+                    });
+                    </script>
+                </div>
+                <div class="clearfix">
+                </div>
+            </div>
+    </header>
+    <div class="content_1 " style="margin-top:120px;">
+        <div class="news_1 f_l wow " style="width:700px;border-right:1px solid #e6e0e0;height:328px;margin-top:50px;">
+            <div class="index_banner" id="banner_tabs" >
+                <ul>
+                    <li>
+                        <a>
+                            <img src="~/Content/pc/images/梯田.jpg" width="100%"height="320px">
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="~/Content/pc/images/banner01 (2).jpg" width="100%" height="320px">
+                        </a>
+                    </li>
+                </ul>
+                <!--此处的img是用来占位的，在实际使用中，可以另外制作一张全空的图片-->
+                <img style="visibility: hidden;" src="~/Content/pc/images/banner01.jpg" width="100%">
+                <cite><span class="cur">1</span> <span>2</span> </cite>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div class="news_2 f_r bounceInRight" style="margin-top:40px;margin-left:-10px;">
+            <div class="news_3" style="">
+                <div class="bt_5 txt_13" style="font-size:17px;color:#ED860B;font-weight:700;">
+                    <img src="~/Content/pc/images/公告.png" style="height:30px;width:30px;margin-top:-5px;"/>
+                    要文公告
+                </div>
+                <div class="content_x news_list" style="font-size:16px;font-weight:700;">
+
+
+                    <dl>
+                        <dt>
+                            <img src="~/Content/pc/images/icon_5.png">&nbsp; <a href="~/Content/pc/News_Show_248.html">
+                                河南扶沟：中原菜都,多彩扶沟
+                            </a>
+                        </dt>
+                        <dd>[2022-09-11]</dd>
+                    </dl>
+
+                    <dl>
+                        <dt>
+                            <img src="~/Content/pc/images/icon_5.png">&nbsp; <a href="~/Content/pc/News_Show_191.html">
+                                扶沟：全力打造中原菜都 叫响扶沟蔬菜品牌
+                            </a>
+                        </dt>
+                        <dd>[2022-09-11]</dd>
+                    </dl>
+
+                    <dl>
+                        <dt>
+                            <img src="~/Content/pc/images/icon_5.png">&nbsp; <a href="~/Content/pc/News_Show_187.html">
+                                 品牌好则效益好，效益好则产业旺
+                            </a>
+                        </dt>
+                        <dd>[2022-09-11]</dd>
+                    </dl>
+
+                    <dl>
+                        <dt>
+                            <img src="~/Content/pc/images/icon_5.png">&nbsp; <a href="~/Content/pc/News_Show_186.html">
+                                 全力打造“中原菜都”，叫响扶沟蔬菜品牌
+                            </a>
+                        </dt>
+                        <dd>[2022-09-11]</dd>
+                    </dl>
+
+                    <dl>
+                        <dt>
+                            <img src="~/Content/pc/images/icon_5.png">&nbsp; <a href="~/Content/pc/News_Show_180.html">
+                                扶沟：强化标准化建设 倾力打造“中原菜都”
+                            </a>
+                        </dt>
+                        <dd>[2016-03-29]</dd>
+                    </dl>
+
+                    <dl>
+                        <dt>
+                            <img src="~/Content/pc/images/icon_5.png">&nbsp; <a href="~/Content/pc/News_Show_177.html">
+                                网站排名上不去，怎么回事？
+                            </a>
+                        </dt>
+                        <dd>[2016-03-18]</dd>
+                    </dl>
+
+                    <dl>
+                        <dt>
+                            <img src="~/Content/pc/images/icon_5.png">&nbsp; <a href="~/Content/pc/News_Show_176.html">
+                                网站是否符合标准，该如何检测？
+                            </a>
+                        </dt>
+                        <dd>[2016-03-10]</dd>
+                    </dl>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    @*<div style="margin-left:174px;margin-top:-60px;">
+        <img src="~/Content/pc/images/特色产业.png" style="width:87%;height:38px;">
+    </div>*@
+    
+    <div class="content_1 " style="margin-top:-60px;">
+        <div  style="height:32px;width:180px;background-color:#ED860B;margin-left:25px;border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:5px;text-align:center;">
+            @*<img src="~/Content/pc/images/icon_4.png">*@
+             <text style="font-size:15px;font-weight:900;color:white;line-height:32px;">特色产业</text>
+        </div>
+        <div class="jianbian" style="width:800px;height:3px;margin-left:205px;margin-top:-3px;"></div>
+    </div>
+    <div class="content_1" style="margin-top:-120px;">
+        <div class="content_x service1 wow " >
+            <section class="business active">
+                <div class="box"style="margin-left:10px;">
+                    <ul class="items list-inline" >
+
+                        <li style="width:280px;">
+                            <img alt="APP开发" src="~/Content/pc/images/扶沟1.jpg" style="width:280px;height:180px;" /><strong style="font-size:15px;font-weight:600;"><a href="Service_Show_7.html">【扶沟县】开展国家农产品地理标志“扶沟西瓜”推介活动</a></strong>
+                            @*<p>根据企业的需求制定个性化方案，找出APP的卖点与需求差异,从移动营销、精准营销、客户依赖、产品延伸四大方面来进行战略规划。将APP的可用性、实效性完全表现出来。</p>*@
+                        </li>
+
+                        <li style="width:280px;">
+                            <img alt="APP开发" src="~/Content/pc/images/扶沟2.jpg" style="width:280px;height:180px;" /><strong style="font-size:15px;font-weight:600;"><a href="Service_Show_7.html">河南扶沟县长登上一亩田代言 助力扶沟蔬菜产业提档升级</a></strong>
+                            @*<p>根据企业的需求制定个性化方案，找出APP的卖点与需求差异,从移动营销、精准营销、客户依赖、产品延伸四大方面来进行战略规划。将APP的可用性、实效性完全表现出来。</p>*@
+                        </li>
+
+                        <li style="width:280px;">
+                            <img alt="APP开发" src="~/Content/pc/images/扶沟3.jpg" style="width:280px;height:180px;" /><strong style="font-size:15px;font-weight:600;"><a href="Service_Show_7.html" >新时代 新作为 新篇章｜扶沟 绿色化助力新农业</a></strong>
+                            @*<p>根据企业的需求制定个性化方案，找出APP的卖点与需求差异,从移动营销、精准营销、客户依赖、产品延伸四大方面来进行战略规划。将APP的可用性、实效性完全表现出来。</p>*@
+                        </li>
+
+                        <li style="width:280px;">
+                            <img alt="APP开发" src="~/Content/pc/images/扶沟4.png" style="width:280px;height:180px;" /><strong style="font-size:15px;font-weight:600;"><a href="Service_Show_7.html">扶沟：全力打造中原菜都 叫响扶沟蔬菜品牌</a></strong>
+                            @*<p>根据企业的需求制定个性化方案，找出APP的卖点与需求差异,从移动营销、精准营销、客户依赖、产品延伸四大方面来进行战略规划。将APP的可用性、实效性完全表现出来。</p>*@
+                        </li>
+
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+    </div>
+    @*<div style="margin-left:170px;margin-top:-200px">
+        <img src="~/Content/pc/images/集采信息.png" style="width:87%;height:40px;">
+    </div>*@
+    <div class="content_1 " style="margin-top:-200px">
+        <div style="height:32px;width:180px;background-color:#ED860B;margin-left:25px;border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:5px;text-align:center;">
+            @*<img src="~/Content/pc/images/icon_4.png">*@
+            <text style="font-size:15px;font-weight:900;color:white;line-height:32px;">集采信息</text>
+        </div>
+        <div class="jianbian" style="width:800px;height:3px;margin-left:205px;margin-top:-3px;"></div>
+    </div>
+
+    <div class="content_1 " style="margin-top:-80px;">
+        <div class="news_2  bounceInRight" style="float:left;width:480px;">
+            <div class="news_3" style="float:left;margin-left:30px;">
+                <div class="bt_5 txt_13" style="font-size:17px;color:#ED860B;font-weight:700;">
+                    <img src="~/Content/pc/images/公告.png" style="height:30px;width:30px;margin-top:-5px;" />
+                    招标信息
+                </div>
+                @*<div class="bt_5 txt_13"  style="font-weight:600;font-size:17px;">
+                    <img src="~/Content/pc/images/icon_4.png">
+                     招标信息
+                </div>*@
+                <div class="content_x news_list" style="font-size:16px;font-weight:700;">
+
+                    <dl style="margin-right:20px;">
+                        <dt>
+                            <img src="~/Content/pc/images/icon_5.png">&nbsp; <a href="~/Content/pc/News_Show_250.html">
+                                海外市场，社交媒体不可或缺！
+                            </a>
+                        </dt>
+                        <dd>[2022-09-11]</dd>
+                    </dl>
+
+                    <dl>
+                        <dt>
+                            <img src="~/Content/pc/images/icon_5.png">&nbsp; <a href="~/Content/pc/News_Show_248.html">
+                                开拓俄罗斯市场，搜索联盟帮你做最好的准备工作
+                            </a>
+                        </dt>
+                        <dd>[2022-09-11]</dd>
+                    </dl>
+
+                    <dl>
+                        <dt>
+                            <img src="~/Content/pc/images/icon_5.png">&nbsp; <a href="~/Content/pc/News_Show_191.html">
+                                小语种网站建设，搜索联盟帮你搞定！
+                            </a>
+                        </dt>
+                        <dd>[2022-09-11]</dd>
+                    </dl>
+
+                    <dl>
+                        <dt>
+                            <img src="~/Content/pc/images/icon_5.png">&nbsp; <a href="~/Content/pc/News_Show_187.html">
+                                搜索联盟专业的手工建站！
+                            </a>
+                        </dt>
+                        <dd>[2022-09-11]</dd>
+                    </dl>
+
+                    <dl>
+                        <dt>
+                            <img src="~/Content/pc/images/icon_5.png">&nbsp; <a href="~/Content/pc/News_Show_186.html">
+                                网站不收录怎么办？搜索联盟有办法！
+                            </a>
+                        </dt>
+                        <dd>[2022-09-11]</dd>
+                    </dl>
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="news_2  bounceInRight" style="border-left:1px solid #e6e0e0;float:left;width:480px;border-right:1px solid #e6e0e0;margin-left:20px;">
+            <div class="news_3" style="float:left;margin-left:10px;">
+                <div class="bt_5 txt_13" style="font-size:17px;color:#ED860B;font-weight:700;">
+                    <img src="~/Content/pc/images/公告.png" style="height:30px;width:30px;margin-top:-5px;" />
+                    中标信息公示
+                </div>
+                @*<div class="bt_5 txt_13" style="font-weight:600;font-size:17px;">
+                    <img src="~/Content/pc/images/icon_4.png">
+                    中标信息公示
+                </div>*@
+                <div class="content_x news_list" style="font-size:16px;font-weight:700;">
+
+                    <dl style="margin-right:20px;">
+                        <dt>
+                            <img src="~/Content/pc/images/icon_5.png">&nbsp; <a href="~/Content/pc/News_Show_250.html">
+                                海外市场，社交媒体不可或缺！
+                            </a>
+                        </dt>
+                        <dd>[2022-09-11]</dd>
+                    </dl>
+
+                    <dl>
+                        <dt>
+                            <img src="~/Content/pc/images/icon_5.png">&nbsp; <a href="~/Content/pc/News_Show_248.html">
+                                开拓俄罗斯市场，搜索联盟帮你做最好的准备工作
+                            </a>
+                        </dt>
+                        <dd>[2022-09-11]</dd>
+                    </dl>
+
+                    <dl>
+                        <dt>
+                            <img src="~/Content/pc/images/icon_5.png">&nbsp; <a href="~/Content/pc/News_Show_191.html">
+                                小语种网站建设，搜索联盟帮你搞定！
+                            </a>
+                        </dt>
+                        <dd>[2022-09-11]</dd>
+                    </dl>
+
+                    <dl>
+                        <dt>
+                            <img src="~/Content/pc/images/icon_5.png">&nbsp; <a href="~/Content/pc/News_Show_187.html">
+                                搜索联盟专业的手工建站！
+                            </a>
+                        </dt>
+                        <dd>[2022-09-11]</dd>
+                    </dl>
+
+                    <dl>
+                        <dt>
+                            <img src="~/Content/pc/images/icon_5.png">&nbsp; <a href="~/Content/pc/News_Show_186.html">
+                                网站不收录怎么办？搜索联盟有办法！
+                            </a>
+                        </dt>
+                        <dd>[2022-09-11]</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="news_2  bounceInRight" style="border-left:1px solid #e6e0e0; width:180px;float:left;">
+         <div style="text-align:center;margin-top:30px;margin-left:10px;"><text style="font-size:16px;font-weight:600;">请关注扶沟官方公众号</text></div>
+            <div style="margin-top:10px;margin-left:15px;">
+                <img alt="weixin" src="~/Content/pc/images/code1.png" width="250" height="170" />
+            </div>
+        </div>
+    </div>
+    <!-- 弹窗代码开始 -->
+    <div  style="position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,0.3);z-index: 99999;display:none;"id="zhuce"  >
+        <div style="position: fixed;top: 50%;left: 50%;width:550px;background: #FFF;transform: translate(-50%, -50%);border-radius: 10px;padding: 50px 40px;">
+      
+            <div  style="display:inline-block;">
+
+                <div style="display:inline;text-align:center;margin-left:175px;">
+                    <img src="~/Content/pc/images/软件.png" style="width:200px;height:auto;"  />
+                </div>
+                <div style="display:block;margin-left:80px;margin-top:20px;" >
+                    <button style="width:180px;border:5px solid #98a3ff;height:40px;border-radius:20px;background-color:#98a3ff;color:white;"onclick="remove()">IOS下载</button>
+                    <button style="width:180px;border:5px solid #98a3ff;height:40px;border-radius:20px;background-color:#98a3ff;color:white;margin-left:20px;" onclick="remove()">Android下载</button>
+                </div>
+            </div>
+         </div>
+    </div>
+    <!-- 弹窗代码结束 -->   
+    <!-- 弹窗代码开始 -->
+    <div style="position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,0.3);z-index: 99999;display:none;" id="xiangqing">
+        <div style="position: fixed;top: 50%;left: 50%;width:550px;background: #FFF;transform: translate(-50%, -50%);border-radius: 10px;padding: 50px 40px;overflow-y:scroll;white-space:nowrap;">
+
+            <div class="content_1">
+                <div class="over_3">
+                    <div class="bak_7">
+
+                        <div class="over_3a f_l  bounceInLeft">
+                            <dl>
+                                <dt>
+                                    <img alt="俄罗斯Yandex推广" alt="俄罗斯Yandex推广" src="images/20161009011111_2534.png">
+                                </dt>
+                                <dd>
+                                    <a href="Overseas_Populaize.html">
+                                        <b>
+                                            俄罗斯Yandex推广
+                                        </b>
+                                    </a><p>
+                                    <p>Yandex作为东欧、中亚排名第一的信息搜索网站，Yandex已经发展为俄罗斯使用率最高、最流行并且广告服务最专业的搜索引擎。</p></p>
+                                </dd>
+                            </dl>
+                        </div>
+
+                        <div class="over_3a f_r bounceInRight">
+                            <dl>
+                                <dt>
+                                    <img alt="韩国Naver推广" src="images/20161009011149_7886.png">
+                                </dt>
+                                <dd>
+                                    <a href="Overseas_Populaize.html">
+                                        <b>
+                                            韩国Naver推广
+                                        </b>
+                                    </a><p>
+                                    <p>NAVER 是韩国的最大的搜索引擎和门户网站，世界第五大搜索引擎网站，也是韩国股票市场上市值最大的互联网公司。</p></p>
+                                </dd>
+                            </dl>
+                        </div>
+
+                        <div class="over_3a f_l  bounceInLeft">
+                            <dl>
+                                <dt>
+                                    <img alt="俄罗斯社交VK推广" alt="俄罗斯社交VK推广" src="images/20161009011202_4433.png">
+                                </dt>
+                                <dd>
+                                    <a href="Overseas_Populaize.html">
+                                        <b>
+                                            俄罗斯社交VK推广
+                                        </b>
+                                    </a><p>
+                                    <p>VK是欧洲最大的社交网站，Alexa的全球排名第20位，仅次于搜索引擎Yandex的俄罗斯第二大网站。</p></p>
+                                </dd>
+                            </dl>
+                        </div>
+
+                        <div class="over_3a f_r  bounceInRight">
+                            <dl>
+                                <dt>
+                                    <img alt="Google全球推广" src="images/20161009011215_4191.png">
+                                </dt>
+                                <dd>
+                                    <a href="Overseas_Populaize.html">
+                                        <b>
+                                            Google全球推广
+                                        </b>
+                                    </a><p>
+                                    <p>Google是互联网上5大最受欢迎的网站之一，在全球范围内拥有无数的用户。Google允许以多种语言进行搜索，在操作界面中提供多达30余种语言选择。</p></p>
+                                </dd>
+                            </dl>
+                        </div>
+
+                        <div class="over_3a f_l  bounceInLeft">
+                            <dl>
+                                <dt>
+                                    <img alt="Bing全球推广" alt="Bing全球推广" src="images/20161009011228_4678.png">
+                                </dt>
+                                <dd>
+                                    <a href="Overseas_Populaize.html">
+                                        <b>
+                                            Bing全球推广
+                                        </b>
+                                    </a><p>
+                                    <p>微软必应搜索是国际领先的搜索引擎,为中国用户提供网页、图片、视频、词典、翻译、资讯、地图等全球信息搜索服务。</p></p>
+                                </dd>
+                            </dl>
+                        </div>
+
+                        <div class="over_3a f_r  bounceInRight">
+                            <dl>
+                                <dt>
+                                    <img alt="Facebook社交推广" src="images/20161017014247_2542.png">
+                                </dt>
+                                <dd>
+                                    <a href="Overseas_Populaize.html">
+                                        <b>
+                                            Facebook社交推广
+                                        </b>
+                                    </a><p>
+                                    <p>Facebook是全球最大的社交网络服务网站，目前已发展成为拥有15.9亿月活跃用户的全球最大社交平台， 全球最佳精准的营销平台。</p></p>
+                                </dd>
+                            </dl>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="over_4 contact_fa">
+                    <a href="Contact.html">关闭页面</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 弹窗代码结束 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <div class="formto">
+         <a href="~/Content/pc/Service.html" >
+             <img src="~/Content/pc/images/icon_1.png" ></a></div>
+     <div class="content_2 solution00 wow bounceInDown">
+         <div class="content_2m">
+             <div class="solution_1 txt_7">
+                 企业运营管理，真正实现企业线上线下一体化</span>
+
+             </div>
+             <img src="~/Content/pc/images/bg.png" >
+
+         </div>
+     </div>
+     <div class="content_2 solution01">
+         <img src="~/Content/pc/images/bg_3.jpg" >
+     </div>
+     <div class="formto">
+         <img src="~/Content/pc/images/icon_1.png" ></div>
+     <div class="content_1">
+         <div class="bt_2">
+             <span class="txt_7">怎样让您的网站利用起来</span><br />
+             <span class="txt_8">We can help you</span></div>
+         <div class="content_x bak_2">
+             <div class="advantage_1 f_l wow bounceInLeft">
+                 <dl>
+
+                     <dd>
+                         <h2>
+                             多年行业经验</h2>
+                         <h3>
+                             十年网络行业经验，成熟策划团队</h3>
+                         <p>
+                             <img src="~/Content/pc/images/icon_3.png" >
+                             多年沉淀汇聚行业设计精英团队，十年坚持始终追球细节完美品质，技术团队经手网站超过300家，具有专业水准、充满创意、视觉冲击力、吸引力、诱惑力的网页。</p>
+                         <p>
+                             <img src="~/Content/pc/images/icon_3.png" >
+                             300多个不同行业，2000家不同企业，精通各类营销方式，"量身定制"属于您的解决方案；我们知道针对您的行业做"合适"您企业的网站。</p>
+                     </dd>
+                 </dl>
+             </div>
+             <div class="advantage_2 f_r wow bounceInRight">
+             </div>
+         </div>
+         <div class="content_x bak_2">
+             <div class="advantage_3 f_l wow bounceInLeft">
+             </div>
+             <div class="advantage_1 f_r wow bounceInRight">
+                 <dl>
+
+                     <dd>
+                         <h2>
+                             专业高素质团队</h2>
+                         <h3>
+                             资深技术团队完美配合，精准策划</h3>
+                         <p>
+                             <img src="~/Content/pc/images/icon_3.png" >
+                             汇聚行业网络营销专家人才，网络营销行业顶级技术团队。公司核心团队均从事网络营销实战操盘5年以上的丰富经验，自主研发的营销型网站系统具备多项智能技术。</p>
+                         <p>
+                             <img src="~/Content/pc/images/icon_3.png" >
+                             团队成员操盘过营销型网站，B2C商城，团购网，商城，B2B行业门户等大型平台，10年运营推广经验，对于付费竞价推广，免费SEO关键词排名推广，站群推广，运营策略等有独特的见解及实操的手法。</p>
+                     </dd>
+                 </dl>
+             </div>
+         </div>
+         <div class="content_x bak_2">
+             <div class="advantage_1 f_l wow bounceInLeft">
+                 <dl>
+
+                     <dd>
+                         <h2>
+                             售后服务</h2>
+                         <h3>
+                             对客户热诚，用心、真诚的服务是我们的宗旨</h3>
+                         <p>
+                             <img src="~/Content/pc/images/icon_3.png" >
+                             承诺每一个网站都是基于客户的情况，量身定做，为客户提供明确、长久、全面的网站运维服务(日常维护服务支持、页面, 功能及内容维护、网站安全维护)。</p>
+                         <p>
+                             <img src="~/Content/pc/images/icon_3.png" >
+                             本着"人尽其才，才尽其用"的用人原则，最大限度的激发员工的积极性和创造性；始终以"人"为本，最大限度的追求公司与员工的双赢。</p>
+                     </dd>
+                 </dl>
+             </div>
+             <div class="advantage_4 f_r wow bounceInRight">
+             </div>
+         </div>
+     </div>
+     <div class="formto">
+         <a href="~/Content/pc/About.html" >
+             <img src="~/Content/pc/images/icon_1.png" ></a></div>
+     <div class="content_3">
+         <div class="bt_3">
+             <span class="txt_10">-已亥优秀应用案例-</span><br>
+             <span class="txt_9">一个好的网站不仅能<span class="txt_11">盈利</span>，更是<span class="txt_11">行业的标杆</span></span></div>
+
+         <div class="content_1 style3">
+             <ul>
+
+                 <li>
+                     <a target="_blank" href=""><img src="~/Content/pc/images/ww (1).jpg" ><span>夏威夷饰品商城</span></a>
+                 </li>
+
+                 <li>
+                     <a target="_blank" href=""><img src="~/Content/pc/images/ww (2).jpg" ><span>MAXORS</span></a>
+                 </li>
+                 <li>
+                     <a target="_blank" href=""><img src="~/Content/pc/images/ww (3).jpg" ><span>T000综合型模板</span></a>
+                 </li>
+                 <li>
+                     <a target="_blank" href=""><img src="~/Content/pc/images/ww (4).jpg" ><span>T001综合型商城</span></a>
+                 </li>
+                 <li>
+                     <a target="_blank" href=""><img src="~/Content/pc/images/ww (5).jpg" ><span>JOHN BAGLEY</span></a>
+                 </li>
+                 <li>
+                     <a target="_blank" href=""><img src="~/Content/pc/images/ww (6).jpg" ><span>T010综合型模板</span></a>
+                 </li>
+                 <li>
+                     <a target="_blank" href=""><img src="~/Content/pc/images/ww (7).jpg" ><span>1BYONE</span></a>
+                 </li>
+                 <li>
+                     <a target="_blank" href=""><img src="~/Content/pc/images/ww (8).jpg" ><span>浩谷家私</span></a>
+                 </li>
+             </ul>
+         </div> -->
+    </div>
+    <!--<div class="formto">
+        <a href="~/Content/pc/News.html" >
+            <img src="~/Content/pc/images/icon_1.png" ></a></div>
+
+    </div> -->
+    <script type="text/javascript">
+        (function () {
+            if (!Function.prototype.bind) {
+                Function.prototype.bind = function (obj) {
+                    var owner = this, args = Array.prototype.slice.call(arguments), callobj = Array.prototype.shift.call(args);
+                    return function (e) { e = e || top.window.event || window.event; owner.apply(callobj, args.concat([e])); };
+                };
+            }
+        })();
+        var banner_tabs = function (id) {
+            this.ctn = document.getElementById(id);
+            this.adLis = null;
+            this.btns = null;
+            this.animStep = 0.2; //动画速度0.1～0.9
+            this.switchSpeed = 6; //自动播放间隔(s)
+            this.defOpacity = 1;
+            this.tmpOpacity = 1;
+            this.crtIndex = 0;
+            this.crtLi = null;
+            this.adLength = 0;
+            this.timerAnim = null;
+            this.timerSwitch = null;
+            this.init();
+        };
+        banner_tabs.prototype = {
+            fnAnim: function (toIndex) {
+                if (this.timerAnim) { window.clearTimeout(this.timerAnim); }
+                if (this.tmpOpacity <= 0) {
+                    this.crtLi.style.opacity = this.tmpOpacity = this.defOpacity;
+                    this.crtLi.style.filter = 'Alpha(Opacity=' + this.defOpacity * 100 + ')';
+                    this.crtLi.style.zIndex = 0;
+                    this.crtIndex = toIndex;
+                    return;
+                }
+                this.crtLi.style.opacity = this.tmpOpacity = this.tmpOpacity - this.animStep;
+                this.crtLi.style.filter = 'Alpha(Opacity=' + this.tmpOpacity * 100 + ')';
+                this.timerAnim = window.setTimeout(this.fnAnim.bind(this, toIndex), 50);
+            },
+            fnNextIndex: function () {
+                return (this.crtIndex >= this.adLength - 1) ? 0 : this.crtIndex + 1;
+            },
+            fnSwitch: function (toIndex) {
+                if (this.crtIndex == toIndex) { return; }
+                this.crtLi = this.adLis[this.crtIndex];
+                for (var i = 0; i < this.adLength; i++) {
+                    this.adLis[i].style.zIndex = 0;
+                }
+                this.crtLi.style.zIndex = 2;
+                this.adLis[toIndex].style.zIndex = 1;
+                for (var i = 0; i < this.adLength; i++) {
+                    this.btns[i].className = '';
+                }
+                this.btns[toIndex].className = 'cur'
+                this.fnAnim(toIndex);
+            },
+            fnAutoPlay: function () {
+                this.fnSwitch(this.fnNextIndex());
+            },
+            fnPlay: function () {
+                this.timerSwitch = window.setInterval(this.fnAutoPlay.bind(this), this.switchSpeed * 1000);
+            },
+            fnStopPlay: function () {
+                window.clearTimeout(this.timerSwitch);
+            },
+            init: function () {
+                this.adLis = this.ctn.getElementsByTagName('li');
+                this.btns = this.ctn.getElementsByTagName('cite')[0].getElementsByTagName('span');
+                this.adLength = this.adLis.length;
+                for (var i = 0, l = this.btns.length; i < l; i++) {
+                    with ({ i: i }) {
+                        this.btns[i].index = i;
+                        this.btns[i].onclick = this.fnSwitch.bind(this, i);
+                        this.btns[i].onclick = this.fnSwitch.bind(this, i);
+                    }
+                }
+                this.adLis[this.crtIndex].style.zIndex = 2;
+                this.fnPlay();
+                this.ctn.onmouseover = this.fnStopPlay.bind(this);
+                this.ctn.onmouseout = this.fnPlay.bind(this);
+            }
+        };
+        var player1 = new banner_tabs('banner_tabs');
+    </script>
+
+    <div class="foot">
+        <div class="foot_m">
+
+            <div class="foot-list foot-list-01">
+                <h2>
+                    关于我们
+                </h2>
+                <p>
+                    中国共富平台是的就是打火机打不打客家话大萨达坎大哈觉得哈酒的的哈技术的卡号的健康和大神经对抗大大和接口
+                </p>
+                <a class="about-button" href="~/Content/pc/About.html">查看更多 >></a>
+            </div>
+            <div class="foot-list foot-list-02">
+                <h2>
+                    最新试点
+                </h2>
+                <div class="foot-caselist">
+
+                    <div class="foot-case-list">
+                        <dl>
+                            <dt>
+                                <img src="~/Content/pc/images/ww (2).jpg"
+                                     width="76" height="51" />
+                            </dt>
+                            <dd>
+                                <span>
+                                    河南周口市扶沟县
+                                </span><a target="_blank" href=""></a>
+                            </dd>
+                        </dl>
+                    </div>
+
+                    <div class="foot-case-list">
+                        <dl>
+                            <dt>
+                                <img src="~/Content/pc/images/ww (4).jpg"
+                                     width="76" height="51" />
+                            </dt>
+                            <dd>
+                                <span>
+                                    广西北海
+                                </span><a target="_blank" href=""></a>
+                            </dd>
+                        </dl>
+                    </div>
+
+                </div>
+            </div>
+            <div class="foot-list foot-list-03">
+                <h2>
+                    快捷链接
+                </h2>
+                <a class="foot-list-nav" href="~/Content/pc/Service.html">A美好</a> <a class="foot-list-nav"
+                                                                                                                                                                                                       href="~/Content/pc/News.html">新闻聚焦</a> <a class="foot-list-nav" href="~/Content/pc/Overseas.html">
+                    I美好
+                </a> <a class="foot-list-nav" href="~/Content/pc/Solutions.html">合作咨询</a> <a class="foot-list-nav"
+                                                                                                                                                                                                            href="~/Content/pc/Contact.html">联系我们</a><a class="foot-list-nav" href="~/Content/pc/About.html">关于我们</a>
+            </div>
+            <div class="foot-list foot-list-04">
+                <h2 style="">
+                    400-995-5758
+                </h2>
+                周一至周五 8:30-17:30
+                <br />
+                微信扫一扫 搜索联盟为您服务
+                <br />
+                <img alt="weixin" src="~/Content/pc/images/code1.png" width="90" height="90" />
+            </div>
+        </div>
+        <div class="foot-o">
+            <div class="foot-o-nav">
+                <p>版权所有@美丽小镇研究院 粤ICP备07012119号&nbsp;<span style="white-space: normal;">广东省广州市天河区
+                    </span></p>
+            </div>
+        </div>
+    </div>
+    <div class="contact_f">
+        <table width="94%" border="0" cellspacing="0" cellpadding="0" style="margin: auto;">
+            <tr>
+                <td>
+                    <img src="~/Content/pc/images/icon_14.png" /><br />
+                    <a href="~/Content/pc/index.htm">返回首页</a>
+                </td>
+                <td>
+                    <img src="~/Content/pc/images/icon_11.png" /><br />
+                    <a href="~/Content/pc/Contact.html">联系我们</a>
+                </td>
+                <td>
+                    <img src="~/Content/pc/images/icon_12.png" /><br />
+                    <a href="tel:18660103869">拨打电话</a>
+                </td>
+                <td>
+                    <img src="~/Content/pc/images/icon_13.png" /><br />
+                    <a href="sms:18660103869">发送短信</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="left-toolbar">
+        <ul>
+            <li>
+                <a href="">
+                    <span class="bar01"></span>
+                    <label>
+                        在线咨询
+                    </label>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">
+                    <span class="bar02"></span>
+                    <label>
+                        400-995-5758
+                    </label>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)" onClick="ReturnTop();">
+                    <span class="bar03"></span>
+                    <label>
+                        返回顶部
+                    </label>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <script src="~/Content/pc/js/wow.min.js"></script>
+    <script>
+        if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))) {
+            new WOW().init();
+        };
+    </script>
+    <div class="xs-message">
+        <script language="javascript" src="file:///B|/其他参考代码/0249e5da5aa0b4c3a10861f72167cf29_haolizi/HTML5响应式企业网站源码/中文（86套）/【NumberOne专业开发】01、互联网（21套）/dkb.duokebo.com/js/detector.aspx-siteid=837766"></script>
+    </div>
+
+    <!-- JiaThis Button BEGIN -->
+    <script type="text/javascript" src="file:///B|/其他参考代码/0249e5da5aa0b4c3a10861f72167cf29_haolizi/HTML5响应式企业网站源码/中文（86套）/【NumberOne专业开发】01、互联网（21套）/v3.jiathis.com/code/jiathis_r.js-type=left&move=0"
+            charset="utf-8"></script>
+    <!-- JiaThis Button END -->
+</body>
+</html>
